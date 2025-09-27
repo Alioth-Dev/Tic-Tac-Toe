@@ -7,6 +7,53 @@
     <title>Tic Tac Toe</title>
 </head>
 <body>
+
+
+    <div class="game-screen">
+
+        <div class="message"> Start Game by Filling Players Name</div>
+
+
+    <div class="container">
+        <div class="row">
+            <div id="0" onclick="displayController.handleMoves(this)" class="cell"></div>
+            <div id="1" onclick="displayController.handleMoves(this)" class="cell"></div>
+            <div id="2" onclick="displayController.handleMoves(this)" class="cell"></div>
+        </div>
+        <div class="row">
+            <div id="3" onclick="displayController.handleMoves(this)" class="cell"></div>
+            <div id="4" onclick="displayController.handleMoves(this)" class="cell"></div>
+            <div id="5" onclick="displayController.handleMoves(this)"class="cell"></div>
+        </div>
+        <div class="row">
+            <div id="6" onclick="displayController.handleMoves(this)" class="cell"></div>
+            <div id="7" onclick="displayController.handleMoves(this)" class="cell"></div>
+            <div id="8" onclick="displayController.handleMoves(this)" class="cell"></div>
+        </div>
+        
+    </div>
+
+
+    <form action="" id="players-info">
+
+        <div class='form-row'>
+  <label for='first-player'>First Player's Name (X) :</label>
+  <input id='first-player' name='first-player' type='text'/>
+</div>
+
+        <div class='form-row'>
+  <label for='second-player'>Second Player's Name (O) :</label>
+  <input id='second-player' name='second-player' type='text'/>
+</div> 
+
+       <div class='form-row'>
+            <button type="submit">Start Game</button>
+        </div>
+    </form>
+
+
+
+    </div>
     
     <script src="script.js"></script>
 </body>

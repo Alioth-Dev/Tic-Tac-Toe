@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+.game-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.message {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.row {
+    display: flex;
+}
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    font-size: 30px;
+}
+
+#players-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
+    margin-top: 40px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
