@@ -136,7 +136,7 @@ const gameController = (() => {
       }
 
       currentPlayerIndex = currentPlayerIndex ? 0 : 1;
-      console.log(currentPlayerIndex);
+      
     } else {
       console.log("No, you Cannot Override Any Moves");
     }
@@ -148,8 +148,6 @@ const gameController = (() => {
       // console.log("Game Draw");
       let msg
       msg = displayController.messageScreen()
-      console.log(msg);
-      console.log("Game Overnoyoyoyoyoy");
       msg.textContent= "Game Over"
     }
     
@@ -157,9 +155,6 @@ const gameController = (() => {
     
    }
 
-
-  //  console.log(gameBoard.getBoard().every((cell) => cell !== ""));
-  
 
 
   const gameFinished = () => gameWon
@@ -176,25 +171,7 @@ const gameController = (() => {
   };
 })();
 
-//Emptyy Board
-// console.log(gameBoard.getBoard());
 
-// Playing Game Via Console
-// gameController.startGame("UTKARSH", "Vaishnavi");    
-
-// console.log(gameController.playersInfo());
-
-// Filling Index 1 and box with X
-// gameBoard.getBoard()[1] = "X"
-
-// gameController.playingTurns("0");
-// gameController.playingTurns("0");
-// gameController.playingTurns("5");
-// gameController.playingTurns("1");
-// gameController.playingTurns("7");
-// gameController.playingTurns("2");
-
-// console.log(gameBoard.getBoard());
 
 
 
@@ -226,6 +203,9 @@ const displayController = (() => {
       console.log(playerFirst.value);
       console.log(playerSecond.value);
 
+      //Game Start Message
+      message.textContent= "Game Started, Please Play your moves"
+
       playersForm.reset();
     }
   });
@@ -235,10 +215,7 @@ const displayController = (() => {
   const displayBoard = () => {
      for (let i=0; i<9; i++) {
       board[i].textContent = gameBoard.getBoard()[i]
-      // console.log(board[].value);
-      
-      console.log("I am working");
-      // console.log(messageScreen());
+     
       
      }
   }
@@ -248,11 +225,9 @@ const displayController = (() => {
     if (gameController.playersInfo().length == 2) {
       
       if (!gameController.drawCheck() && !gameController.gameFinished()) { 
-      console.log(x.id);
+   
       gameController.playingTurns(x.id)
-      console.log(gameController.playersInfo().length)
-      console.log(gameBoard.getBoard());
-      console.log(board);
+      
       displayBoard()
       gameController.drawCheck()
       }
